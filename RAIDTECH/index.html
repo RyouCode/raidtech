@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheet -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cssreset-min.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- StyleSheet FONT-->
+    <link rel="stylesheet" href="https://use.typekit.net/zeu4tnx.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@700&display=swap" rel="stylesheet">
+    <!-- Title -->
+    <title>RaidTech</title>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+        (function($) {
+            $(function() {
+                var $header = $('#top-head');
+
+                // Nav Fixed
+                $(window).scroll(function() {
+                    if ($(window).scrollTop() > 300) {
+                        $header.addClass('fixed');
+                    } else {
+                        $header.removeClass('fixed');
+                    }
+                });
+
+                // Nav Toggle Button
+                $('#nav-toggle').click(function() {
+                    $header.toggleClass('open');
+                });
+
+            });
+        })(jQuery);
+    </script>
+</head>
+
+<body>
+
+    <header id="top-head">
+        <div class="inner">
+            <div id="mobile-head">
+                <img class="logo" src="images/site-logo.png" alt="">
+                <!-- Nav Toggle-->
+                <div id="nav-toggle">
+                    <div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Navigation -->
+            <nav id="global-nav">
+                <ul>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">WORKS</a></li>
+                    <li><a href="#">COMPANY</a></li>
+                    <li><a href="#">RECRUIT</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- MAIN -->
+    <main>
+        <section class="top_view">
+            <video autoplay muted loop id="myVideo">
+                <source src="../RAIDTECH/images/view-video.mp4" type="video/mp4">
+              </video>
+            <div class="container">
+                <h1 class="top_view-txt">Web制作 ・ECショップ制作 ・ 動画制作 <br>システム開発 ・ アプリケーション開発</h1>
+                <div class="button">
+                    <a href="#">
+                      CONTACT US
+                      <span class="shift">›</span>
+                    </a>
+                    <div class="mask"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

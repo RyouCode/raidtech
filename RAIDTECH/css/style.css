@@ -1,0 +1,302 @@
+@charset "UTF-8";
+
+/* Header CSS */
+
+body {
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+}
+
+.header .container {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    max-width: none;
+}
+
+.header .container:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.logo img {
+    display: block;
+}
+
+.logo img:hover {
+    opacity: 0.1;
+}
+
+.logo_txt {
+    color: #fff;
+    font-size: 8px;
+    margin: 20px;
+    margin-right: 100px;
+}
+
+main {
+    padding-top: 5px;
+}
+
+
+/* header */
+
+#top-head {
+    top: -100px;
+    position: absolute;
+    width: 100%;
+    margin: 100px auto 0;
+    padding: 30px 0 0;
+    line-height: 1;
+    z-index: 999;
+}
+
+#top-head a,
+#top-head {
+    color: #fff;
+    text-decoration: none;
+}
+
+#top-head .inner {
+    position: relative;
+}
+
+#top-head .logo {
+    float: left;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#top-head .logo:hover {
+    background-color: darkred;
+}
+
+#global-nav {
+    padding: 20px;
+}
+
+#global-nav ul {
+    list-style: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 16px;
+}
+
+#global-nav ul li {
+    float: left;
+}
+
+#global-nav ul li a {
+    padding: 0 30px;
+}
+
+#global-nav li a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-family: atrament-web, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+}
+
+#global-nav li a:after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #fff;
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+}
+
+#global-nav li a:hover:after {
+    width: 100%;
+    left: 0;
+    background: #fff;
+}
+
+
+/* Fixed */
+
+#top-head.fixed {
+    margin-top: 0;
+    top: 0;
+    position: fixed;
+    padding-top: 10px;
+    height: 55px;
+    background: #fff;
+    background: rgba(255, 255, 255, .7);
+    transition: top 0.65s ease-in;
+    -webkit-transition: top 0.65s ease-in;
+    -moz-transition: top 0.65s ease-in;
+}
+
+#top-head.fixed #global-nav ul li a {
+    color: #333;
+    padding: 0 20px;
+}
+
+
+/* Toggle Button */
+
+#nav-toggle {
+    display: none;
+    position: absolute;
+    right: 12px;
+    top: 14px;
+    width: 34px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 101;
+}
+
+#nav-toggle div {
+    position: relative;
+}
+
+#nav-toggle span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    left: 0;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+}
+
+#nav-toggle span:nth-child(1) {
+    top: 0;
+}
+
+#nav-toggle span:nth-child(2) {
+    top: 11px;
+}
+
+#nav-toggle span:nth-child(3) {
+    top: 22px;
+}
+
+
+/* TOP VIEW CSS */
+
+#myVideo {
+    width: 100%;
+}
+
+.top_view {
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+}
+
+.top_view-txt {
+    position: absolute;
+    top: 310px;
+    right: 330px;
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Shippori Mincho', serif;
+}
+
+.button {
+    border: 2px solid #fff;
+    cursor: pointer;
+    letter-spacing: 0.2125rem;
+    line-height: 1;
+    overflow: hidden;
+    padding: 20px 30px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background 5s cubic-bezier(0.19, 1, 0.22, 1), border 1s cubic-bezier(0.19, 1, 0.22, 1), color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    user-select: none;
+    position: absolute;
+    top: 30em;
+    left: 37em;
+}
+
+.button a {
+    color: #fff;
+    font-family: "Varela Round";
+    text-decoration: none;
+}
+
+.button .mask {
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100px;
+    position: absolute;
+    transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
+    transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+    width: 200px;
+}
+
+.button .shift {
+    display: inline-block;
+    transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+    vertical-align: text-top;
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: #fff;
+    box-shadow: 0 0 5px rgba(255, 245, 245, 0.8);
+    transition: background 0s;
+}
+
+.button:hover a {
+    color: #fff;
+}
+
+.button:hover .mask {
+    background-color: #fff;
+    transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
+}
+
+.button:hover .shift {
+    transform: translateX(5px);
+}
+
+.button:active {
+    background-color: #fff;
+}
+
+.button:active a {
+    color: #202020;
+}
+
+body.show {
+    background-color: #282828;
+}
+
+
+/*
+  .button:hover {
+    background-image: url('http://.com/img/codepen/savvy.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  */
